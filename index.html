@@ -157,24 +157,23 @@ h2 .g { color: var(--g); }
 
 .photo-col { display: flex; flex-direction: column; justify-content: center; }
 
-.about-mosaic img {
-  object-fit: contain !important;
-  padding: 8px;
+.about-mosaic-5 {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-rows: 245px 245px;
+  gap: 8px;
 }
 
-.about-mosaic {
-  min-height: 500px;
-}
-.about-mosaic .tile.tall { grid-row: span 2; }
-.about-mosaic .tile:not(.tall) { min-height: 150px; }
-@media (min-width: 861px) {
-  .about-mosaic {
-    grid-template-columns: 1.25fr 1fr 1fr;
-    grid-template-rows: 245px 245px;
-  }
-  .about-mosaic .tile:nth-child(4) { grid-column: span 2; }
+.about-mosaic-5 .tile.tall {
+  grid-row: span 2;
 }
 
+.about-mosaic-5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0;
+}
 
 
 .hero-photo.fixed-photo img {
@@ -550,11 +549,12 @@ footer a { color: var(--g); text-decoration: none; }
     <div class="v-rule"></div>
     <div class="about-col reveal photo-col">
       <div class="sec-head" style="visibility:hidden; margin-bottom:1rem;"><span class="sec-num">—</span><h2>—</h2></div>
-      <div class="mosaic about-mosaic">
+      <div class="mosaic about-mosaic about-mosaic-5">
         <div class="tile tall fixed-photo" id="t1"><img id="t1i" src="photo2.jpg" alt="Graduation or campus photo" style="display:block;"></div>
         <div class="tile fixed-photo" id="t2"><img id="t2i" src="photo3.jpg" alt="Work photo" style="display:block;"></div>
         <div class="tile fixed-photo" id="t3"><img id="t3i" src="photo4.jpg" alt="Life photo" style="display:block;"></div>
         <div class="tile fixed-photo" id="t4"><img id="t4i" src="photo5.jpg" alt="Hobbies photo" style="display:block;"></div>
+        <div class="tile fixed-photo" id="t5"><img id="t5i" src="photo10.jpg" alt="Hobbies photo" style="display:block;"></div>
       </div>
     </div>
   </div>
