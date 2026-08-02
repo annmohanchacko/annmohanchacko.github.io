@@ -733,10 +733,16 @@ h1 {
 
 .tool-grid {
   display: grid;
-  grid-template-columns: 0.8fr 0.8fr 1.2fr 1.2fr;
+  grid-template-columns: repeat(4, 1fr);
   border: 1px solid var(--line);
 }
 
+#toolkit .tool-grid {
+  grid-template-columns: 0.8fr 0.8fr 1.2fr 1.2fr;
+}
+.skills-grid {
+  grid-template-columns: 0.8fr 0.8fr 1.2fr 1.2fr;
+}
 .tool-card {
   padding: 1.6rem;
   border-right: 1px solid var(--line);
